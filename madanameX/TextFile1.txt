@@ -3,4 +3,10 @@
 思いついたことをメモしておくようのページ
 Wiki以下、メモ以上
 
+ナレッジ
+http://web.biz-prog.net/fundamental/fundamental.html
+
+オブジェクトの扱い方
+https://msdn.microsoft.com/ja-jp/library/dd163924.aspx
+
 
