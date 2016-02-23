@@ -44,7 +44,11 @@
         System.Threading.Thread.Sleep(1000)
 
         ' ■■お店速報を投稿する■■
+        'WIN8　64Bitでの更新動作は以下
         DirectCast(ie.Document, mshtml.HTMLDocument).forms(0).submit()
+
+        '3秒間 ボーっとする
+        System.Threading.Thread.Sleep(3000)
 
         ie.Quit()
 
