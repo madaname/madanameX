@@ -22,13 +22,15 @@ Partial Class Form1
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(67, 140)
+        Me.Button1.Location = New System.Drawing.Point(15, 65)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(137, 23)
         Me.Button1.TabIndex = 0
@@ -40,17 +42,20 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.Enabled = False
         Me.Label1.Font = New System.Drawing.Font("メイリオ", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
-        Me.Label1.Location = New System.Drawing.Point(64, 83)
+        Me.Label1.Location = New System.Drawing.Point(12, 35)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(140, 18)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "デリヘル1分間:お店速報"
         '
+        'Timer1
+        '
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(273, 261)
+        Me.ClientSize = New System.Drawing.Size(663, 261)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
@@ -62,4 +67,5 @@ Partial Class Form1
 
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents Timer1 As Timer
 End Class

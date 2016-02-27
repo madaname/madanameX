@@ -75,4 +75,36 @@
     End Function
 
 
+
+    '+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+    ' 処理概要：指定時刻で実行する。
+    ' 使用方法：onTimeStart("指定時刻")
+    '+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+    Public Function onTimeStart(ByVal objSpecifiedtimeIE As String) As Boolean
+
+        ' 現在の日時を取得します
+        Dim dNow As DateTime = System.DateTime.Now
+
+        ' 日付と時刻を取得します
+        Dim dDate As DateTime = dNow.Date         ' 現在の日付を取得します
+        Dim tTime As TimeSpan = dNow.TimeOfDay    ' 現在の時刻を取得します
+
+        Dim Specifiedtime As String
+
+        ' 本日日付 + 指定時刻
+        Dim thday1 As Date = DateTime.ParseExact(dDate & " " & Specifiedtime, "yyyy/MM/dd HH:mm:ss", System.Globalization.DateTimeFormatInfo.InvariantInfo)
+        Dim thday2 As Date = Now()
+
+        If thday1 > thday2 Then
+            Call upd1punomise()
+            Return True
+        Else
+            Return False
+        End If
+
+    End Function
+
+
+
 End Module
